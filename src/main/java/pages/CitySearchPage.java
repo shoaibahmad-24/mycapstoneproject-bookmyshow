@@ -109,6 +109,5 @@ public class CitySearchPage {
     	}
     	return false;
     }
-    
-    
+       
 }

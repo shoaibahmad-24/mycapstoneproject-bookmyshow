@@ -12,49 +12,49 @@ public class WaitUtils {
 
     private static final int DEFAULT_TIMEOUT = 10; // seconds
 
-    /**
-     * Wait until the element is visible
-     */
+    
+     // Wait until the element is visible
+     
     public static WebElement waitForVisibility(WebDriver driver, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    /**
-     * Wait until the element located by a locator is visible
-     */
+    
+    //Wait until the element located by a locator is visible
+     
     public static WebElement waitForVisibility(WebDriver driver, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    /**
-     * Wait until the element is clickable
-     */
+    
+     //Wait until the element is clickable
+     
     public static WebElement waitForClickability(WebDriver driver, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    /**
-     * Wait until the element is present in DOM
-     */
+    
+      //Wait until the element is present in DOM
+     
     public static WebElement waitForPresence(WebDriver driver, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
-    /**
-     * Wait until the element disappears
-     */
+    
+      //Wait until the element disappears
+     
     public static boolean waitForInvisibility(WebDriver driver, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
         return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
 
-    /**
-     * Custom wait with timeout
-     */
+    
+     // Custom wait with timeout
+     
     public static WebElement waitForVisibility(WebDriver driver, WebElement element, int timeoutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         return wait.until(ExpectedConditions.visibilityOf(element));
