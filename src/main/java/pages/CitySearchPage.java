@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import utils.WaitUtils;
 
@@ -44,7 +44,7 @@ public class CitySearchPage {
 
     // "View All Cities" link
 //    @FindBy(xpath = "//p[@class='sc-p6ayv6-0 iwwDFF' and text()='View All Cities']")
-    @FindBy(xpath = "//p[text()='View All Cities']")
+    @FindBy(xpath = "//p[contains(text(),'View All Cities')]\n")
     private WebElement viewAllCitiesLink;
 
     // List of cities from "View All Cities" section
